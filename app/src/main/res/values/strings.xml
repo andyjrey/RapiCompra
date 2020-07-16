@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">RapiCompra</string>
+    <string name="txtBienvenida">¡Bienvenido a tu portal RAPICOMPRA, Inicia sesión o registrate para continuar!</string>
+    <string name="btnIni">Login</string>
+    <string name="btnRegistro">Registrate</string>
+    <string name="txtUsu">Usuario</string>
+    <string name="txtPass">Contraseña</string>
 </resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "597483102512",
+    "firebase_url": "https://today-706cd.firebaseio.com",
+    "project_id": "today-706cd",
+    "storage_bucket": "today-706cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597483102512:android:0cfac475f7a6300246a8f5",
+        "android_client_info": {
+          "package_name": "com.uisrael.rapicompra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597483102512-g6b6qu15gatlfg3at9uigqflq0h4ide9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uisrael.rapicompra",
+            "certificate_hash": "4f2c2de06b70ac7abacf22be839bb52a7dc825a5"
+          }
+        },
+        {
+          "client_id": "597483102512-9gka8rn38262ua4cfmlv91onp3fllkm8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDej-U38jWlpNPPwCIe8euZvx5mDIIdDGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597483102512-9gka8rn38262ua4cfmlv91onp3fllkm8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

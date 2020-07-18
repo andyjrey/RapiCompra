@@ -5,4 +5,10 @@
     <string name="btnRegistro">Registrate</string>
     <string name="txtUsu">Usuario</string>
     <string name="txtPass">Contraseña</string>
+    <string name="txtNombre">Nombre</string>
+    <string name="txtApellido">Apellido</string>
+    <string name="txtCorreo">Email</string>
+    <string name="txtContraseña">Contraseña</string>
+    <string name="txtRepcont">Repetir Contraseña</string>
+
 </resources>

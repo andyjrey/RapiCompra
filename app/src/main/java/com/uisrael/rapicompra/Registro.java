@@ -55,6 +55,7 @@ public class Registro extends AppCompatActivity implements GoogleApiClient.OnCon
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        Toast.makeText(this,"No se puede conectar",Toast.LENGTH_SHORT).show();
 
     }
 
@@ -71,6 +72,7 @@ public class Registro extends AppCompatActivity implements GoogleApiClient.OnCon
     private void handlesSignInResult(GoogleSignInResult result) {
         if(result.isSuccess()){
             goProductsScreen();
+
         }else{
             Toast.makeText(this,"No se pudo iniciar sesión",Toast.LENGTH_SHORT).show();
         }
@@ -78,6 +80,7 @@ public class Registro extends AppCompatActivity implements GoogleApiClient.OnCon
 
     private void goProductsScreen() {
         Intent intent=new Intent(this,Productos.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 }

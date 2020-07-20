@@ -5,9 +5,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -28,12 +31,19 @@ public class Registro extends AppCompatActivity implements GoogleApiClient.OnCon
     private  GoogleApiClient googleApiClient;
     private SignInButton signInButton;
     public  static final int SIGN_IN_CODE=777;
+    EditText nom,ape,correo,pass,r_pass;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
+        nom=findViewById(R.id.etNombre);
+        ape=findViewById(R.id.etApellido);
+        correo=findViewById(R.id.etEmail);
+        pass=findViewById(R.id.etPassword);
+        r_pass=findViewById(R.id.etRepPassword);
+
         GoogleSignInOptions gso= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
@@ -51,7 +61,43 @@ public class Registro extends AppCompatActivity implements GoogleApiClient.OnCon
         });
 
             }
+    public void Registrar(View v){
+        AdminSQLiteOpenHelper admin=new AdminSQLiteOpenHelper(this,"administracion",null,1);
+        SQLiteDatabase db=admin.getWritableDatabase();
+        String nomb=nom.getText().toString();
+        String apellid=ape.getText().toString();
+        String corre=correo.getText().toString();
+        String passw=pass.getText().toString();
+        String rpass=r_pass.getText().toString();
+        if (!(pass.getText().toString().equals(r_pass.getText().toString()))){
+            Toast.makeText(this,"Las Contraseñas no Coinciden",Toast.LENGTH_SHORT).show();
+        }else if (!nomb.isEmpty() && !apellid.isEmpty() && !corre.isEmpty() && !passw.isEmpty() && !rpass.isEmpty()) {
+                ContentValues registro = new ContentValues();
+                registro.put("nombre", nomb);
+                registro.put("apellido", apellid);
+                registro.put("email", corre);
+                registro.put("clave", passw);
+                registro.put("confirmar_clave", rpass);
 
+                db.insert("registro", null, registro);
+                db.close();
+                nom.setText("");
+                ape.setText("");
+                correo.setText("");
+                pass.setText("");
+                r_pass.setText("");
+
+                Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
+                goProductsScreen();
+
+            } else {
+                Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_SHORT).show();
+            }
+            // ver ubicación de base de datos
+            // String pathDatabase=getDatabasePath("mybasededatos.db").getAbsolutePath();
+            // Toast.makeText(getApplicationContext(),pathDatabase,Toast.LENGTH_LONG).show();
+
+    }
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {

@@ -24,17 +24,19 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="56dp"
             android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/editTextTextPersonName"
+            <TextView
+                android:id="@+id/txtNombreU"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
                 android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name" />
+                android:lineSpacingExtra="8sp"
+                android:text="@string/txtUsuario"
+                android:textSize="24sp" />
+
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

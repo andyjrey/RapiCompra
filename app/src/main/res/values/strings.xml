@@ -10,5 +10,6 @@
     <string name="txtCorreo">Email</string>
     <string name="txtContraseña">Contraseña</string>
     <string name="txtRepcont">Repetir Contraseña</string>
+    <string name="txtUsuario">Bienvenido</string>
 
 </resources>

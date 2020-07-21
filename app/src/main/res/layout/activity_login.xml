@@ -29,6 +29,7 @@
             android:id="@+id/txtUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="@string/txtUsu" />
 
@@ -38,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Nombre"
+            android:hint="Email"
             android:inputType="textPersonName" />
     </LinearLayout>
 
@@ -51,6 +52,7 @@
             android:id="@+id/txtPass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="@string/txtPass" />
 
@@ -74,6 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="verificar"
             android:text="@string/btnIni" />
 
     </LinearLayout>

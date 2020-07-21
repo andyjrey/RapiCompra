@@ -11,5 +11,12 @@
     <string name="txtContraseña">Contraseña</string>
     <string name="txtRepcont">Repetir Contraseña</string>
     <string name="txtUsuario">Bienvenido</string>
+    <string name="txtPaso1">Paso 1</string>
+    <string name="txtPaso2">Paso 2</string>
+    <string name="txtPaso3">Paso 3</string>
+    <string name="btnPro">Selecciona tus Productos</string>
+    <string name="btnCar">Productos en el Carrito</string>
+    <string name="btnUbi">Agregar tu Ubicación</string>
+    <string name="txtListar">Escoja su Producto...</string>
 
 </resources>

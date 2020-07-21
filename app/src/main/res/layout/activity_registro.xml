@@ -29,6 +29,7 @@
             android:id="@+id/txtNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="@string/txtNombre" />
 
@@ -51,6 +52,7 @@
             android:id="@+id/txtApellido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="@string/txtApellido" />
 
@@ -73,6 +75,7 @@
             android:id="@+id/txtEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="@string/txtCorreo" />
 
@@ -94,6 +97,7 @@
             android:id="@+id/txtPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="@string/txtContraseña" />
 
@@ -115,6 +119,7 @@
             android:id="@+id/txtRepPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="@string/txtRepcont" />
 

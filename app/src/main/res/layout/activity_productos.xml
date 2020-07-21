@@ -38,5 +38,74 @@
                 android:textSize="24sp" />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtSel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="@string/txtPaso1" />
+
+            <Button
+                android:id="@+id/btnProd"
+                android:layout_width="wrap_content"
+                android:layout_height="111dp"
+                android:layout_weight="1"
+                android:onClick="goListaProductosScreen"
+                android:text="@string/btnPro"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="129dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtSel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="@string/txtPaso2" />
+
+            <Button
+                android:id="@+id/btnCar"
+                android:layout_width="wrap_content"
+                android:layout_height="111dp"
+                android:layout_weight="1"
+                android:onClick="goPedidoCarritoScreen"
+                android:text="@string/btnCar"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="126dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtSel3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="@string/txtPaso3" />
+
+            <Button
+                android:id="@+id/btnUbi"
+                android:layout_width="wrap_content"
+                android:layout_height="111dp"
+                android:layout_weight="1"
+                android:onClick="goUbicacionScreen"
+                android:text="@string/btnUbi"
+                android:textSize="14sp" />
+        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,20 +7,31 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
-
+/*
     public AdminSQLiteOpenHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
-
+*/
+    private static final int DATABASE_VERSION=1;
+    private static final String DATABASE_NAME="administracion.sqlite";
+    public AdminSQLiteOpenHelper(Context context)
+    {
+        super(context,DATABASE_NAME,null,DATABASE_VERSION);
+    }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table registro (nombre text,apellido text,email text,contraseña text,rep_contraseña text)");
-        db.execSQL("create table listar_productos(nombre_pro text,precio real,cantidad int,subtotal real)");
+        db.execSQL("create table registro (_id INTEGER PRIMARY KEY AUTOINCREMENT, nombre text,apellido text,email text,contrasena text,rep_contrasena text)");
+       // db.execSQL("create table listar_productos(nombre_pro text,precio real,cantidad int,subtotal real)");
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
+    }
+
+    @Override
+    public void onOpen(SQLiteDatabase db) {
+        super.onOpen(db);
     }
 }

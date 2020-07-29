@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
     EditText user,pass;
+   // public Cursor fila;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,30 +23,42 @@ public class Login extends AppCompatActivity {
     }
 
     public void verificar (View v){
-        AdminSQLiteOpenHelper admin=new AdminSQLiteOpenHelper(this,"administracion",null,1);
-        SQLiteDatabase db=admin.getWritableDatabase();
+        AdminSQLiteOpenHelper admin=new AdminSQLiteOpenHelper(getBaseContext());
+       // AdminSQLiteOpenHelper admin=new AdminSQLiteOpenHelper(this,"administracion",null,1);
+       // SQLiteDatabase db=admin.getWritableDatabase();
+        SQLiteDatabase db=admin.getReadableDatabase();
         String usu=user.getText().toString();
         String passw=pass.getText().toString();
+        if(!usu.isEmpty()) {
+            //fila = db.rawQuery("select email, contrasena from registro where email='" +usu+"'and contrasena='"+passw+"'", null);
+            Cursor d = db.rawQuery("select email, contrasena from registro where email='" +usu+"'and contrasena='"+passw+"'", null);
+            //preguntamos si el cursor tiene algun valor almacenado
+            if(d!=null) {
+                d.moveToFirst();
+                //do{
+                    //almacenamos los valores capturados
+                    String usua = d.getString(0);
+                    String password = d.getString(1);
+                    //db.close();
 
-            Cursor fila =db.rawQuery("select email,contraseña from registro where email='"+usu+"'and contraseña='"+passw+"'",null);
-        if(fila.moveToFirst()== true){
-            //almacenamos los valores capturados
-            String usua=fila.getString(0);
-            String password=fila.getString(1);
+                    //comparamos valores en edit text con los de la base de datos
+                   if (usu.equals(usua) && passw.equals(password)) {
 
-           //comparamos valores en edit text con los de la base de datos
-            if(usu.equals(usua)&& passw.equals(password)) {
-
-                Intent intent = new Intent(this, Lista_Productos.class);
-                startActivity(intent);
-            }else{
-                Toast.makeText(this,"Usuario o Contraseña Incorrectos",Toast.LENGTH_SHORT).show();
-                user.setText("");
-                pass.setText("");
+                        Intent intent = new Intent(this, Productos.class);
+                        startActivity(intent);
+                   }
+                    else {
+                    Toast.makeText(this, "Usuario o Contraseña Incorrectos", Toast.LENGTH_SHORT).show();
+                    user.setText("");
+                    pass.setText("");
+                     }
+              //  }while(d.moveToNext());
 
             }
-
-            }
-
+            d.close();
+            db.close();
+        }else {
+            Toast.makeText(this, "Debes introducir los datos", Toast.LENGTH_SHORT).show();
+        }
     }
 }

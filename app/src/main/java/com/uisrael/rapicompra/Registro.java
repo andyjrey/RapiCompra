@@ -7,7 +7,9 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -62,7 +64,7 @@ public class Registro extends AppCompatActivity implements GoogleApiClient.OnCon
 
             }
     public void Registrar(View v){
-        AdminSQLiteOpenHelper admin=new AdminSQLiteOpenHelper(this,"administracion",null,1);
+        AdminSQLiteOpenHelper admin=new AdminSQLiteOpenHelper(this);
         SQLiteDatabase db=admin.getWritableDatabase();
         String nomb=nom.getText().toString();
         String apellid=ape.getText().toString();
@@ -76,8 +78,8 @@ public class Registro extends AppCompatActivity implements GoogleApiClient.OnCon
                 registro.put("nombre", nomb);
                 registro.put("apellido", apellid);
                 registro.put("email", corre);
-                registro.put("clave", passw);
-                registro.put("confirmar_clave", rpass);
+                registro.put("contrasena", passw);
+                registro.put("rep_contrasena", rpass);
 
                 db.insert("registro", null, registro);
                 db.close();
@@ -89,6 +91,7 @@ public class Registro extends AppCompatActivity implements GoogleApiClient.OnCon
 
                 Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
                 goProductsScreen();
+
 
             } else {
                 Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_SHORT).show();

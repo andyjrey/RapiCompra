@@ -19,7 +19,14 @@
     <string name="btnUbi">Agregar tu Ubicación</string>
     <string name="txtListar">Escoja su Producto...</string>
     <string name="txtPro1">Artículos Tecnológicos</string>
-    <string name="txtPro2">Prendas de Vestir</string>
+    <string name="txtPro2">Moda</string>
     <string name="txtPro3">Artículos Varios</string>
+    <string name="ckBoxP">ASUS 509 Core I5 500Gb</string>
+    <string name="txtPreP">894</string>
+    <string name="chkCell">Samsung Z Flip 256Gb</string>
+    <string name="txtPreCell">1733</string>
+    <string name="chkTe">Xtech Armiger Keyboard</string>
+    <string name="txtPreTe">18</string>
+    <string name="btnAgregar">Agregar al Carrito</string>
 
 </resources>

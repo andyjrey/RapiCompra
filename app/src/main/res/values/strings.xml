@@ -18,5 +18,8 @@
     <string name="btnCar">Productos en el Carrito</string>
     <string name="btnUbi">Agregar tu Ubicación</string>
     <string name="txtListar">Escoja su Producto...</string>
+    <string name="txtPro1">Artículos Tecnológicos</string>
+    <string name="txtPro2">Prendas de Vestir</string>
+    <string name="txtPro3">Artículos Varios</string>
 
 </resources>

@@ -28,5 +28,28 @@
     <string name="chkTe">Xtech Armiger Keyboard</string>
     <string name="txtPreTe">18</string>
     <string name="btnAgregar">Agregar al Carrito</string>
+    <string name="chkBoxModa1">Conjunto de pantalones y top corto </string>
+    <string name="txtPreModa1">30</string>
+    <string name="chkBoxModa2">Terno Chados</string>
+    <string name="txtPreModa2">99</string>
+    <string name="chkModa3">Camisa popelin vichy rojo</string>
+    <string name="txtPreModa3">37</string>
+    <string name="txtTalla">Tallas:</string>
+    <string name="cbT1">S</string>
+    <string name="cbT2">M</string>
+    <string name="cbT3">L</string>
+    <string name="btnAgregarModa">Agregar al Carrito</string>
+    <string name="btnRegresar">Atras</string>
+    <string name="chkVarios1">Mascarillas N95</string>
+    <string name="txtPreV1">13.95</string>
+    <string name="chkVarios2">OLLAS INDUCCIÓN 6 PZ WARENHAUS SATÍN</string>
+    <string name="txtPreV2">59.90</string>
+    <string name="chkVarios3">Mochila ERAY</string>
+    <string name="txtPreV3">45</string>
+    <string name="txtPed">¡Tu Pedido!</string>
+    <string name="txtSub">Subtotal</string>
+    <string name="txtIva">IVA 12%</string>
+    <string name="txtEnvio">Valor de Envío</string>
+    <string name="txtTot">Total</string>
 
 </resources>

@@ -42,7 +42,7 @@
     <string name="btnRegresar">Atras</string>
     <string name="chkVarios1">Mascarillas N95</string>
     <string name="txtPreV1">13.95</string>
-    <string name="chkVarios2">OLLAS INDUCCIÓN 6 PZ WARENHAUS SATÍN</string>
+    <string name="chkVarios2">Ollas Inducción 6 PZ Warenhaus Satín</string>
     <string name="txtPreV2">59.90</string>
     <string name="chkVarios3">Mochila ERAY</string>
     <string name="txtPreV3">45</string>
@@ -51,5 +51,11 @@
     <string name="txtIva">IVA 12%</string>
     <string name="txtEnvio">Valor de Envío</string>
     <string name="txtTot">Total</string>
+    <string name="txtDetalle">Detalle</string>
+    <string name="txtCantidad">Cantidad</string>
+    <string name="txtPrecio">Precio Unitario</string>
+    <string name="txtName">Contacto</string>
+    <string name="txtTel">Telefono</string>
+    <string name="btnUbicar">Confirmar</string>
 
 </resources>

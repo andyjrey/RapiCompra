@@ -24,8 +24,6 @@ public class Login extends AppCompatActivity {
 
     public void verificar (View v){
         AdminSQLiteOpenHelper admin=new AdminSQLiteOpenHelper(getBaseContext());
-       // AdminSQLiteOpenHelper admin=new AdminSQLiteOpenHelper(this,"administracion",null,1);
-       // SQLiteDatabase db=admin.getWritableDatabase();
         SQLiteDatabase db=admin.getReadableDatabase();
         String usu=user.getText().toString();
         String passw=pass.getText().toString();
@@ -33,30 +31,26 @@ public class Login extends AppCompatActivity {
             //fila = db.rawQuery("select email, contrasena from registro where email='" +usu+"'and contrasena='"+passw+"'", null);
             Cursor d = db.rawQuery("select email, contrasena from registro where email='" +usu+"'and contrasena='"+passw+"'", null);
             //preguntamos si el cursor tiene algun valor almacenado
-            if(d!=null) {
-                d.moveToFirst();
-                //do{
-                    //almacenamos los valores capturados
-                    String usua = d.getString(0);
-                    String password = d.getString(1);
-                    //db.close();
 
-                    //comparamos valores en edit text con los de la base de datos
-                   if (usu.equals(usua) && passw.equals(password)) {
+            if( d.moveToFirst()){
+                //almacenamos los valores capturados
+                String usua = d.getString(0);
+                String password = d.getString(1);
+                //db.close();
 
-                        Intent intent = new Intent(this, Productos.class);
-                        startActivity(intent);
-                   }
-                    else {
-                    Toast.makeText(this, "Usuario o Contraseña Incorrectos", Toast.LENGTH_SHORT).show();
-                    user.setText("");
-                    pass.setText("");
-                     }
-              //  }while(d.moveToNext());
+                //comparamos valores en edit text con los de la base de datos
+                if (usu.equals(usua) && passw.equals(password)) {
 
+                    Intent intent = new Intent(this, Productos.class);
+                    startActivity(intent);
+                }
+            }else {
+                Toast.makeText(this, "Usuario o Contraseña Incorrectos", Toast.LENGTH_SHORT).show();
+                user.setText("");
+                pass.setText("");
             }
-            d.close();
-            db.close();
+            // d.close();
+          //  db.close();
         }else {
             Toast.makeText(this, "Debes introducir los datos", Toast.LENGTH_SHORT).show();
         }

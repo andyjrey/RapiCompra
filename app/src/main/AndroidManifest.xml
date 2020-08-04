@@ -17,12 +17,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Varios" />
-        <activity android:name=".Prendas_Vestir" />
         <activity android:name=".Tecnologia" />
         <activity android:name=".Ubicacion" />
         <activity android:name=".Pedido" />
-        <activity android:name=".Lista_Productos" />
         <activity android:name=".Productos" />
         <activity android:name=".Registro" />
         <activity android:name=".Login" />

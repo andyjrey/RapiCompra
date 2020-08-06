@@ -29,7 +29,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 
 
-public class Ubicacion extends FragmentActivity implements OnMapReadyCallback {
+public class UbicacionRapi extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private TextView Lat, Lon;
@@ -38,7 +38,7 @@ public class Ubicacion extends FragmentActivity implements OnMapReadyCallback {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ubicacion);
+        setContentView(R.layout.activity_ubicacion_rapi);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -96,7 +96,7 @@ public class Ubicacion extends FragmentActivity implements OnMapReadyCallback {
     public void CambiarActividad(View v){
 
         //Acción para cambiar de actividad
-        Intent intentUbicacion = new Intent(Ubicacion.this,Pedido.class);
+        Intent intentUbicacion = new Intent(UbicacionRapi.this,Pedido.class);
         startActivity(intentUbicacion);
     }
 

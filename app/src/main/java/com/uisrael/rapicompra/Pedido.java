@@ -98,7 +98,7 @@ public class Pedido extends AppCompatActivity {
 
     }
     public void goToUbicacionScreen (){
-        Intent intent=new Intent(Pedido.this,Ubicacion.class);
+        Intent intent=new Intent(Pedido.this,UbicacionRapi.class);
         startActivity(intent);
     }
     public void goListaProductosScreen(View v) {

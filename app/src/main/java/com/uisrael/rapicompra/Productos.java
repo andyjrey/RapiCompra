@@ -40,7 +40,7 @@ public class Productos extends AppCompatActivity {
         startActivity(intent);
     }
     public void goUbicacionScreen(View v) {
-        Intent intent=new Intent(this,Ubicacion.class);
+        Intent intent=new Intent(this,UbicacionRapi.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }

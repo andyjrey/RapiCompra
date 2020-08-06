@@ -72,7 +72,7 @@ public class Registro extends AppCompatActivity implements GoogleApiClient.OnCon
         String passw=pass.getText().toString();
         String rpass=r_pass.getText().toString();
         if (!(pass.getText().toString().equals(r_pass.getText().toString()))){
-            Toast.makeText(this,"Las Contraseñas no Coinciden",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Las Contraseñas no Coinciden",Toast.LENGTH_LONG).show();
         }else if (!nomb.isEmpty() && !apellid.isEmpty() && !corre.isEmpty() && !passw.isEmpty() && !rpass.isEmpty()) {
                 ContentValues registro = new ContentValues();
                 registro.put("nombre", nomb);
@@ -89,12 +89,12 @@ public class Registro extends AppCompatActivity implements GoogleApiClient.OnCon
                 pass.setText("");
                 r_pass.setText("");
 
-                Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_LONG).show();
                 goProductsScreen();
 
 
             } else {
-                Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_LONG).show();
             }
             // ver ubicación de base de datos
             // String pathDatabase=getDatabasePath("mybasededatos.db").getAbsolutePath();
@@ -104,7 +104,7 @@ public class Registro extends AppCompatActivity implements GoogleApiClient.OnCon
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        Toast.makeText(this,"No se puede conectar",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"No se puede conectar",Toast.LENGTH_LONG).show();
 
     }
 
@@ -123,7 +123,7 @@ public class Registro extends AppCompatActivity implements GoogleApiClient.OnCon
             goProductsScreen();
 
         }else{
-            Toast.makeText(this,"No se pudo iniciar sesión",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"No se pudo iniciar sesión",Toast.LENGTH_LONG).show();
         }
     }
 

@@ -57,5 +57,6 @@
     <string name="txtName">Contacto</string>
     <string name="txtTel">Telefono</string>
     <string name="btnUbicar">Confirmar</string>
+    <string name="title_activity_ubicacion_rapi">Map</string>
 
 </resources>
